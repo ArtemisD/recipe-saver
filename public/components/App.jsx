@@ -3,17 +3,26 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      list: practiceData.recipes
+      list: []
     };
 
+    this.debounceSearch = _.debounce(searchRecipes, 500);
   }
 
-  onSearch(userInput) {
+  componentDidMount() {
     searchRecipes({
+      key: FOOD2GO_API_KEY,
+      q: 'apple pie'
+    }, data => {
+      this.setState({list: data.recipes});
+    });
+}
+
+  onSearch(userInput) {
+    this.debounceSearch({
       key: FOOD2GO_API_KEY,
       q: userInput
     }, data => {
-      console.log(data)
       this.setState({list: data.recipes});
     });
   }
