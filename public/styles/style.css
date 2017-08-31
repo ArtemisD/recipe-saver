@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Amiko|Fugaz+One');
+
+/*body {
+  background-color: #FBD1A2;
+}*/
+
+.navbar {
+  background-color: #FC9F5B;
+  font-family: 'Fugaz One', cursive;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: 'Amiko', sans-serif;
+}
+
+.search {
+  font-family: 'Amiko', sans-serif;
+  font-style: italic;
+}
+.card {
+    margin: .75rem;
+    padding: .5rem;
+    background-color: #FFFFFF;
+}
+
+.btn-info, .btn-danger {
+    margin-top: .25rem;
+}
