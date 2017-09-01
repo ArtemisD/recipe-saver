@@ -48,6 +48,6 @@ class SavedApp extends React.Component {
   }
 
   ReactDOM.render(
-    <SavedApp/>, document.body);
+    <SavedApp/>, document.getElementById("SavedApp"));
 
   window.SavedApp = SavedApp;
