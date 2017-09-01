@@ -4,9 +4,7 @@ var RecipeEntry = (props) => (
       <h6>{props.recipe.title}</h6>
     </a>
     <img className="img-fluid" src={props.recipe.image_url}/>
-    <div onClick={() => props.handleButtonClick(props.recipe)}>
-           <button type="button" className="btn btn-info">Save Recipe</button>
-    </div>
+           <button type="button" className="btn btn-info " onClick={() => props.handleButtonClick(props.recipe)} >Save Recipe</button>
   </div>
 
 );

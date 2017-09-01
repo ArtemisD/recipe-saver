@@ -29,3 +29,11 @@
 .btn-info, .btn-danger {
     margin-top: .25rem;
 }
+
+.btn-info:focus{
+    background:green;
+}
+
+.alert{
+    display: none;
+}

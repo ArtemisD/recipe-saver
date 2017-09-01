@@ -33,7 +33,7 @@ class App extends React.Component {
       type: 'POST',
       data: recipe,
       success: function() {
-        console.log('SUCCESSFUL POST')
+        console.log('SUCCESSFUL POST');
       }.bind(this),
       error: function() {
         console.log('failed to post');
@@ -52,6 +52,7 @@ class App extends React.Component {
   }
 
   ReactDOM.render(
-    <App/>, document.body);
+    <App/>, document.getElementById("main")
+  );
 
   window.App = App;

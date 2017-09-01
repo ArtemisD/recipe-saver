@@ -4,10 +4,8 @@ var SavedRecipeEntry = (props) => (
       <h6>{props.recipe.title}</h6>
     </a>
     <img className="img-fluid" src={props.recipe.image_url}/>
-    <div onClick={() => props.handleButtonClick(props.recipe, props.recipe.recipe_id)}>
-           <button type="button" className="btn btn-danger">
+           <button type="button" className="btn btn-danger" onClick={() => props.handleButtonClick(props.recipe, props.recipe.recipe_id)}>
              Delete Recipe</button>
-    </div>
   </div>
 
 );
