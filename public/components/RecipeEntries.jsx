@@ -4,7 +4,6 @@ var RecipeEntries = (props) => (
           <RecipeEntry  key={entry.recipe_id} recipe={entry} handleButtonClick={props.handleButtonClick}/>
         )}
   </div>
-
 );
 
 RecipeEntries.propTypes = {

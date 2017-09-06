@@ -8,7 +8,7 @@ var searchRecipes = (options, callback) => {
     },
     success: function(data) {
       console.log('get success');
-      data = data.replace('&amp;', '&');
+      data = data.replace('&amp;', '&') && data.replace('&#8217;', "'");
       data = JSON.parse(data);
       callback(data);
     },

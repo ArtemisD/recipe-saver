@@ -3,7 +3,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      list: []
+      list: [],
+      saved: false
     };
 
     this.debounceSearch = _.debounce(searchRecipes, 500);
@@ -12,7 +13,7 @@ class App extends React.Component {
   componentDidMount() {
     searchRecipes({
       key: FOOD2GO_API_KEY,
-      q: 'apple pie'
+      q: ''
     }, data => {
       this.setState({list: data.recipes});
     });
