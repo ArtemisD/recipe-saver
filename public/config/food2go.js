@@ -1,0 +1,1 @@
+window.FOOD2GO_API_KEY = 'b92491110f435dcc6f149ac9cd40be06';
