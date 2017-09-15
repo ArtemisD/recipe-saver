@@ -1,8 +1,10 @@
 var searchRecipes = (options, callback) => {
   $.ajax({
+    xhrFields: {
+      withCredentials: true
+    },
     url: 'https://food2fork.com/api/search?',
     type: 'GET',
-    useDefaultXhrHeader: false,
     data: {
       key: options.key,
       q: options.q
