@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 var SavedRecipes = require('./lib/models/savedRecipes');
 var handler = require('./lib/request-handler');
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -20,6 +21,6 @@ app.post('/recipes', handler.addRecipe);
 
 app.delete('/recipes/:recipe_id', handler.deleteRecipe);
 
-app.listen(3000, function() {
-	console.log("Started server at port 3000");
+app.listen(PORT, function() {
+	console.log("Started server");
 });
