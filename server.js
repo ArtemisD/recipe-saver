@@ -1,5 +1,5 @@
 var express = require('express');
-var cors = require('cors');
+// var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var SavedRecipes = require('./lib/models/savedRecipes');
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/recipes', cors(), handler.findAllRecipes);
+app.get('/recipes', handler.findAllRecipes);
 
 app.post('/recipes', handler.addRecipe);
 
