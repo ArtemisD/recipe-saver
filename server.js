@@ -1,12 +1,13 @@
-// var app = require("./Routes/routes");
-var express = require('express')
+var express = require('express');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose')
-var SavedRecipes = require('./lib/models/savedRecipes')
-var handler = require('./lib/request-handler')
+var mongoose = require('mongoose');
+var cors = require('cors');
+var SavedRecipes = require('./lib/models/savedRecipes');
+var handler = require('./lib/request-handler');
 
 var app = express();
 
+app.use(cors({origin: 'https://localhost/3000'}));
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
