@@ -1,9 +1,9 @@
 {
   "name": "mvp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon",
     "babel": "babel public/components/. --out-dir public/components/compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline",
     "babel-watch": "babel public/components/. --out-dir public/components/compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline --watch"
   },

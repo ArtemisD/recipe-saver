@@ -1,7 +1,7 @@
 var RecipeEntries = (props) => (
   <div className='flex-container'>
         {props.list.map(entry =>
-          <RecipeEntry  key={entry.recipe_id} recipe={entry} handleButtonClick={props.handleButtonClick}/>
+          <RecipeEntry  key={entry.shareAs} entry={entry} handleButtonClick={props.handleButtonClick}/>
         )}
   </div>
 );

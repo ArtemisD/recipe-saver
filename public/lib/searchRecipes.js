@@ -1,14 +1,13 @@
 var searchRecipes = (options, callback) => {
   $.ajax({
-    xhrFields: {
-      withCredentials: true
-    },
-    url: 'https://food2fork.com/api/search?',
-    type: 'GET',
+    crossOrigin: true,
+    url: 'http://food2fork.com/api/search?',
+    // proxy:, 
     data: {
       key: options.key,
       q: options.q
     },
+    context: {},
     success: function(data) {
       console.log('get success');
       data = data.replace('&amp;', '&') && data.replace('&#8217;', "'");

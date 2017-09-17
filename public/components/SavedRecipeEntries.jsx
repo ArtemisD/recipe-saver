@@ -1,7 +1,7 @@
 var SavedRecipeEntries = (props) => (
   <div className='flex-container'>
     {props.list.map(entry =>
-      <SavedRecipeEntry  key={entry.recipe_id} recipe={entry} handleButtonClick={props.handleButtonClick}/>
+      <SavedRecipeEntry  key={entry.recipe_id} entry={entry} handleButtonClick={props.handleButtonClick}/>
     )}
   </div>
 );

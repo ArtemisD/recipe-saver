@@ -7,24 +7,30 @@ class App extends React.Component {
       saved: false
     };
 
-    this.debounceSearch = _.debounce(searchRecipes, 500);
+    this.debounceSearch = _.debounce(searchRecipes2, 500);
   }
 
   componentDidMount() {
-    searchRecipes({
-      key: FOOD2GO_API_KEY,
-      q: ''
+    searchRecipes2({
+      api_key: EDAMAM_API_KEY,
+      q: 'pie'
     }, data => {
-      this.setState({list: data.recipes});
+      this.setState({list: data.hits});
     });
 }
 
+// componentDidMount() {
+//   searchRecipes2(data => {
+//     this.setState({list: data.recipes});
+//   });
+// }
+
   onSearch(userInput) {
     this.debounceSearch({
-      key: FOOD2GO_API_KEY,
+      api_key: EDAMAM_API_KEY,
       q: userInput
     }, data => {
-      this.setState({list: data.recipes});
+      this.setState({list: data.hits});
     });
   }
 
