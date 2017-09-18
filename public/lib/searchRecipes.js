@@ -1,17 +1,16 @@
 var searchRecipes = (options, callback) => {
   $.ajax({
     crossOrigin: true,
-    url: 'http://food2fork.com/api/search?',
-    // proxy:, 
+    url: 'https://api.edamam.com/search?',
+    datatype: 'jsonp',
     data: {
-      key: options.key,
+      app_key: options.api_key,
+      app_id: options.api_id,
       q: options.q
     },
     context: {},
     success: function(data) {
       console.log('get success');
-      data = data.replace('&amp;', '&') && data.replace('&#8217;', "'");
-      data = JSON.parse(data);
       callback(data);
     },
     error: function() {
