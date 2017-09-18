@@ -12,8 +12,8 @@ class App extends React.Component {
 
   componentDidMount() {
     searchRecipes({
-      api_key: API_KEY,
-      api_id: API_ID,
+      api_key: ENV["API_KEY"],
+      api_id: ENV["API_ID"],
       q: 'key lime'
     }, data => {
       this.setState({list: data.hits});
