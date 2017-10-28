@@ -25,8 +25,8 @@ var searchRecipes = (options, callback) => {
 //     url: 'http://api.yummly.com/v1/api/recipes?',
 //     datatype: 'jsonp',
 //     data: {
-//       _app_key: options.api_key,
 //       _app_id: options.api_id,
+//       _app_key: options.api_key,
 //       q: options.q
 //     },
 //     context: {},
