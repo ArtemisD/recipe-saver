@@ -1,6 +1,6 @@
 var NavBar = (props) => (
   <nav className="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
-    <a className="navbar-brand" href="../index.html">Sukipe</a>
+    <a className="navbar-brand" href="../index.html">Sukipes</a>
     <Search userInput={props.userInput}/>
     <div className="navbar-nav ml-auto">
       <a className="nav-term " href="../saved.html">Saved Recipes</a>
