@@ -12,9 +12,9 @@ class App extends React.Component {
 
   componentDidMount() {
     searchRecipes({
-      api_key: API_KEY,
+      q: 'key lime',
       api_id: API_ID,
-      q: 'key lime'
+      api_key: API_KEY,
     }, data => {
       this.setState({list: data.hits});
     });
@@ -22,9 +22,9 @@ class App extends React.Component {
 
   onSearch(userInput) {
     this.debounceSearch({
-      api_key: API_KEY,
+      q: userInput,
       api_id: API_ID,
-      q: userInput
+      api_key: API_KEY,
     }, data => {
       this.setState({list: data.hits});
     });

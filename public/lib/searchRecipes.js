@@ -4,9 +4,9 @@ var searchRecipes = (options, callback) => {
     url: 'https://api.edamam.com/search?',
     datatype: 'jsonp',
     data: {
-      app_key: options.api_key,
+      q: options.q,
       app_id: options.api_id,
-      q: options.q
+      app_key: options.api_key
     },
     context: {},
     success: function(data) {
