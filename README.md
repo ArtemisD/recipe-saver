@@ -3,4 +3,4 @@ Built using ReactJS, Babel, jQuery, and Edamam's recipe data API on the front-en
 
 To view this app please visit http://sukipes.herokuapp.com/
 
-This is a solo project I completed as a student at hackreactor. 
+
